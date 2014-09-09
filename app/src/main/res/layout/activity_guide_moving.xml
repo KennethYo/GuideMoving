@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".GuideMovingActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_dots" />
+
+    <com.example.kenneth.guidemoving.CarAnimView
+        android:id="@+id/iv_car"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/ll_dots"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_go_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_car"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_go_start_selector"
+        android:visibility="gone" />
+
+</RelativeLayout>
